@@ -1,9 +1,6 @@
-#include "core.h"
+#include <iostream>
 
 int main() {
-    Core core;
 
-    core.update();
-
-    return 0;
+  return 0;
 }

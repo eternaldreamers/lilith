@@ -2,11 +2,10 @@ add_rules("mode.debug", "mode.release")
 
 set_policy("package.requires_lock", true)
 
-includes("core/xmake.lua")
-includes("graph/xmake.lua")
+add_requires("sfml")
 
 target("lilith")
     set_kind("binary")
-    add_deps("core", "graph")
-    add_files("*.cpp")
-    add_headerfiles("game.h")
+    add_files("core/*.cpp", "graph/*.cpp", "*.cpp")
+    add_headerfiles("core/*.h", "graph/*.g", "*.h")
+    add_packages("sfml")
